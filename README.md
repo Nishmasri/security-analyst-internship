@@ -1,20 +1,24 @@
-# Basic Network Scanning with Nmap
+# Wireshark Network Traffic Capture
 
 ## Objective
-Perform a basic network scan using Nmap to identify open ports and services.
+To capture and analyze network traffic using Wireshark.
 
 ## Tool Used
-- Nmap
+Wireshark
 
-## Commands Used
-nmap 127.0.0.1  
-nmap -sV 127.0.0.1  
+## Steps Performed
+- Started packet capture on active network interface
+- Generated traffic by visiting websites (Google, YouTube)
+- Used ping command to generate ICMP traffic
+- Stopped capture after analysis
 
-## Results
+## Files Included
+- capture.pcap → Captured network traffic file
 
-- Port 135 → MSRPC (Windows RPC service)
-- Port 445 → SMB (File sharing service)
-- Port 3306 → MySQL (Database service)
+## Observations
+- DNS requests were captured when accessing websites
+- TCP packets were used for web browsing communication
+- ICMP packets were observed during ping operations
 
 ## Conclusion
-The scan successfully identified active services running on the local system.
+The network traffic was successfully captured and analyzed using Wireshark.
